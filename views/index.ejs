@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)http://www.runoob.com/try/bootstrap/layoutit/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="title" content="Bootstrap可视化布局系统">
-<meta name="description" content="Bootstrap可视化布局系统是一款可在线拖放排序、在线编辑的Bootstrap可视化编辑器，通过该工具你可以通过拖放的形式的实现在线编辑基于bootstrap的html模板，并可直接生成模板，生成的模板可以直接下载。">
-<meta name="keywords" content="bootstrap在线编辑器,bootstrap在线设计,bootstrap可视化工具">
+<meta name="title" content="make.js">
+<meta name="description" content="make.js">
+<meta name="keywords" content="make.js">
 <link href="./bootstrap.min.css" rel="stylesheet">
 <link href="./layoutit.css" rel="stylesheet">
-<!--[if lt IE 9]>
-	<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-	<![endif]-->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.runoob.com/try/bootstrap/layoutit/v3/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.runoob.com/try/bootstrap/layoutit/v3/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.runoob.com/try/bootstrap/layoutit/v3/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="http://www.runoob.com/try/bootstrap/layoutit/v3/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="http://www.runoob.com/favicon.ico">
+
 <script type="text/javascript" src="./jquery.min.js"></script>
 <script type="text/javascript" src="./jquery-ui.min.js"></script>
 <script type="text/javascript" src="./jquery.ui.touch-punch.min.js"></script>
@@ -25,60 +17,26 @@
 </head>
 <body class="edit" style="min-height: 652px;">
 <!-- nav{} -->
-<div class="navbar navbar-inverse navbar-fixed-top navbar-layoutit">
+<div class="navbar navbar-fixed-top navbar-layoutit serif">
 <div class="navbar-header">
-<button data-target="navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
-<span class="glyphicon-bar"></span>
-<span class="glyphicon-bar"></span>
-<span class="glyphicon-bar"></span>
-</button>
-<a class="navbar-brand" href="http://www.runoob.com/">
-<img src="./favicon.png">
-菜鸟工具
-<span class="label label-default">BETA</span>
-</a>
+<a href="javascript:;" class="hd-logo"><strong >Make.js</strong></a>
 </div>
+
 <div class="collapse navbar-collapse">
-<ul class="nav" id="menu-layoutit">
+<ul class="nav mod-nav" id="menu-layoutit">
 <li>
+
 <div class="btn-group" data-toggle="buttons-radio">
-<button type="button" id="edit" class="active btn btn-xs btn-primary"> <i class="glyphicon glyphicon-edit "></i>
-编辑
-</button>
-<button type="button" class="btn btn-xs btn-primary" id="devpreview">
-<i class="glyphicon-eye-close glyphicon"></i>
-开发
-</button>
-<button type="button" class="btn btn-xs btn-primary" id="sourcepreview">
-<i class="glyphicon-eye-open glyphicon"></i>
-预览
-</button>
+<a href="javascript:;" id="edit">编辑</a>
+<a href="javascript:;" id="devpreview">开发</a>
+<a href="javascript:;" id="sourcepreview">预览</a>
 </div>
+
 <div class="btn-group">
-<button type="button" class="btn btn-xs btn-primary" id="button-download-modal" data-target="#downloadModal" role="button" data-toggle="modal"> <i class="glyphicon-chevron-down glyphicon"></i>
-下载
-</button>
-<button class="btn btn-xs btn-primary" href="#clear" id="clear">
-<i class="glyphicon-trash glyphicon"></i>
-清空
-</button>
+<!--<a href="javascript:;" id="button-download-modal" data-target="#downloadModal" data-toggle="modal">下载</a>-->
+<a href="javascript:;" id="clear">清空</a>
 </div>
-<div class="btn-group">
-<a target="_blank" href="http://www.runoob.com/try/bootstrap/layoutit/index_old.html">
-<button type="button" class="btn btn-xs btn-primary">
-前往旧版
-<i class="glyphicon-chevron-right glyphicon"></i>
-</button>
-</a>
-</div>
-<div class="btn-group">
-<a target="_blank" href="http://www.runoob.com/bootstrap/bootstrap-tutorial.html">
-<button type="button" class="btn btn-xs btn-primary">
-Bootstrap 教程
-<i class="glyphicon-chevron-right glyphicon"></i>
-</button>
-</a>
-</div>
+
 </li>
 </ul>
 </div>
@@ -88,32 +46,21 @@ Bootstrap 教程
 <div class="row">
 <div class="">
 <!-- sidebar{} -->
-<div class="sidebar-nav">
+<div class="sidebar-nav serif">
 <ul class="nav nav-list accordion-group">
 <li class="nav-header">
-<div class="pull-right popover-info">
-<i class="glyphicon glyphicon-question-sign"></i>
-<div class="popover fade right">
-<div class="arrow"></div>
-<h3 class="popover-title">帮助</h3>
-<div class="popover-content">
-在这里设置你的栅格布局, 栅格总数默认为12, 用空格分割每列的栅格值, 如果您需要了解更多信息，请访问
-<a href="http://www.runoob.com/bootstrap/bootstrap-grid-system.html">BOOTSTRAP栅格系统.</a>
-</div>
-</div>
-</div>
 <i class="glyphicon-plus glyphicon"></i>
-布局设置
+Layout
 </li>
 <li class="rows" id="estRows">
 <div class="lyrow ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon-remove glyphicon"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
 <div class="preview">
 <input type="text" value="12" class="form-control"></div>
@@ -124,13 +71,13 @@ Bootstrap 教程
 </div>
 </div>
 <div class="lyrow ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon-remove glyphicon"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
 <div class="preview">
 <input type="text" value="6 6" class="form-control"></div>
@@ -142,13 +89,13 @@ Bootstrap 教程
 </div>
 </div>
 <div class="lyrow ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon-remove glyphicon"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
 <div class="preview">
 <input type="text" value="8 4" class="form-control"></div>
@@ -160,13 +107,13 @@ Bootstrap 教程
 </div>
 </div>
 <div class="lyrow ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon-remove glyphicon"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
 <div class="preview">
 <input type="text" value="4 4 4" class="form-control"></div>
@@ -179,13 +126,13 @@ Bootstrap 教程
 </div>
 </div>
 <div class="lyrow ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon-remove glyphicon"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
 <div class="preview">
 <input type="text" value="2 6 4" class="form-control"></div>
@@ -202,312 +149,140 @@ Bootstrap 教程
 <ul class="nav nav-list accordion-group">
 <li class="nav-header">
 <i class="glyphicon glyphicon-plus"></i>
-基本CSS
-<div class="pull-right popover-info">
-<i class="glyphicon glyphicon-question-sign "></i>
-<div class="popover fade right">
-<div class="arrow"></div>
-<h3 class="popover-title">帮助</h3>
-<div class="popover-content">
-将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该元素的样式。如果你需要了解更多内容，请访问
-<a target="_blank" href="http://www.runoob.com/bootstrap/bootstrap-css-overview.html">基本CSS.</a>
-</div>
-</div>
-</div>
+CSS
+
 </li>
 <li class="boxes" id="elmBase">
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-对齐
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-left">靠左</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-center">居中</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-right">靠右</a>
-</li>
-</ul>
-</span>
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-标记
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="muted">禁用</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-warning">警告</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-error">错误</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-info">提示</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-success">成功</a>
-</li>
-</ul>
-</span>
-</span>
-<div class="preview">标题栏</div>
+
+<div class="preview">Title</div>
 <div class="view">
-<h3 contenteditable="true">h3. 这是一套可视化布局系统.</h3>
+<h3 contenteditable="true">欢迎大家欣赏Toti的毕设作品.</h3>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-对齐
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-left">靠左</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-center">居中</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-right">靠右</a>
-</li>
-</ul>
-</span>
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-标记
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="muted">禁用</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-warning">警告</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-error">错误</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-info">提示</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="text-success">成功</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="lead">Lead</a>
-</span>
-<div class="preview">段落</div>
+
+<div class="preview"> Paragraph</div>
 <div class="view">
-<p> <em>Git</em>
-是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong>
-编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在
-<small>Ruby</small>
-社区中。
+<p> <em>Make.js</em>
+是一个微网站发布工具，由 <strong>Toti</strong>
+编写，在Node下运行，配合tmt-workflow工作流，
+<em>Mock.js</em>
+可以完整模仿一个网站的开发。
 </p>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">地址</div>
+<div class="preview">Address</div>
 <div class="view">
-<address contenteditable="true"> <strong>Twitter, Inc.</strong>
+<address contenteditable="true"> <strong>Make.js</strong>
 <br>
-795 Folsom Ave, Suite 600
+make by toti 
 <br>
-San Francisco, CA 94107
-<br> <abbr title="Phone">P:</abbr>
-(123) 456-7890
+share for everyone
 </address>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="pull-right">Pull right</a>
-</span>
-<div class="preview">引用块</div>
+
+<div class="preview">Quota</div>
 <div class="view clearfix">
 <blockquote contenteditable="true">
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+Make.js & Mock.js 结合在一起使用，将极大地提高开发效率
 </p>
 <small>
-Someone famous
-<cite title="Source Title">Source Title</cite>
+Toti
+<cite title="Source Title">Scau</cite>
 </small>
 </blockquote>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="list-unstyled">无样式</a>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="list-inline">嵌入</a>
-</span>
-<div class="preview">无序列表</div>
+
+<div class="preview">Ul-List</div>
 <div class="view">
 <ul contenteditable="true">
-<li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li>
-<li>Integer molestie lorem at massa</li>
-<li>Facilisis in pretium nisl aliquet</li>
-<li>Nulla volutpat aliquam velit</li>
-<li>Faucibus porta lacus fringilla vel</li>
-<li>Aenean sit amet erat nunc</li>
-<li>Eget porttitor lorem</li>
+<li>Make 可以让小白也学会使用</li>
+<li>Mock 则是更高阶的开发</li>
+<li>迅速搭建合适你的微网站</li>
 </ul>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="list-unstyled">无样式</a>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="list-inline">嵌入</a>
-</span>
-<div class="preview">有序列表</div>
+
+<div class="preview">Ol-List</div>
 <div class="view">
 <ol contenteditable="true">
-<li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li>
-<li>Integer molestie lorem at massa</li>
-<li>Facilisis in pretium nisl aliquet</li>
-<li>Nulla volutpat aliquam velit</li>
-<li>Faucibus porta lacus fringilla vel</li>
-<li>Aenean sit amet erat nunc</li>
-<li>Eget porttitor lorem</li>
+<li>Node</li>
+<li>tmt-workflow</li>
+<li>aui-artTemplate</li>
+<li>gulp</li>
+<li>webpack</li>
+<li>element-ui</li>
+<li>bootstrap</li>
 </ol>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="dl-horizontal">竖向对齐</a>
-</span>
-<div class="preview">详细描述</div>
-<div class="view">
-<dl contenteditable="true">
-<dt>Description lists</dt>
-<dd>A description list is perfect for defining terms.</dd>
-<dt>Euismod</dt>
-<dd>
-Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-</dd>
-<dd>Donec id elit non mi porta gravida at eget metus.</dd>
-<dt>Malesuada porta</dt>
-<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-<dt>Felis euismod semper eget lacinia</dt>
-<dd>
-Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-</dd>
-</dl>
-</div>
-</div>
-<div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="table-striped">条纹</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="table-bordered">边框</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="table-hover">鼠标指示</a>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="table-condensed">紧凑</a>
-</span>
-<div class="preview">表格</div>
+
+<div class="preview">Table</div>
 <div class="view">
 <table class="table" contenteditable="true">
 <thead>
@@ -554,181 +329,63 @@ Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferm
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="form-inline">嵌入</a>
-</span>
-<div class="preview">提交表单</div>
+
+<div class="preview">Form</div>
 <div class="view">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"></div>
+<label for="exampleInputEmail1">用户名</label>
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name"></div>
 <div class="form-group">
-<label for="exampleInputPassword1">Password</label>
+<label for="exampleInputPassword1">密码</label>
 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></div>
 <div class="form-group">
-<label for="exampleInputFile">File input</label>
+<label for="exampleInputFile">文件上传</label>
 <input type="file" id="exampleInputFile">
-<p class="help-block">Example block-level help text here.</p>
 </div>
 <div class="checkbox">
 <label>
-<input type="checkbox">Check me out</label>
+<input type="checkbox">同意请打勾</label>
+<p class="help-block">我已阅读协议。</p>
 </div>
-<button type="submit" class="btn btn-default">Submit</button>
+<button type="submit" class="btn btn-default">提交</button>
 </form>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration"></span>
-<div class="preview">纵向表单</div>
+
+<div class="preview">BTN</div>
 <div class="view">
-<form class="form-horizontal" role="form">
-<div class="form-group">
-<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-<div class="col-sm-10">
-<input type="email" class="form-control" id="inputEmail3" placeholder="Email"></div>
-</div>
-<div class="form-group">
-<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-<div class="col-sm-10">
-<input type="password" class="form-control" id="inputPassword3" placeholder="Password"></div>
-</div>
-<div class="form-group">
-<div class="col-sm-offset-2 col-sm-10">
-<div class="checkbox">
-<label>
-<input type="checkbox">Remember me</label>
-</div>
-</div>
-</div>
-<div class="form-group">
-<div class="col-sm-offset-2 col-sm-10">
-<button type="submit" class="btn btn-default">Sign in</button>
-</div>
-</div>
-</form>
+<button type="button" class="btn btn-default" contenteditable="true">BTN</button>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-primary">原生</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-info">信息</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-success">成功</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-warning">提醒</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-danger">危险</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-inverse">反转</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-link">链接</a>
-</li>
-</ul>
-</span>
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-尺寸
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-lg">大</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-default">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-sm">小</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-xs">微型</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-block">通栏</a>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="active">活动</a>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="disabled">禁用</a>
-</span>
-<div class="preview">按钮</div>
-<div class="view">
-<button type="button" class="btn btn-default" contenteditable="true">按钮</button>
-</div>
-</div>
-<div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="img-rounded">圆角</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="img-circle">圆圈</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="img-thumbnail">相框</a>
-</li>
-</ul>
-</span>
-</span>
-<div class="preview">图片</div>
+
+<div class="preview">PIC</div>
 <div class="view">
 <img alt="140x140" src="default3.jpg"></div>
 </div>
@@ -737,56 +394,20 @@ Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferm
 <ul class="nav nav-list accordion-group">
 <li class="nav-header">
 <i class="glyphicon glyphicon-plus"></i>
-工具组件
-<div class="pull-right popover-info">
-<i class="glyphicon glyphicon-question-sign "></i>
-<div class="popover fade right">
-<div class="arrow"></div>
-<h3 class="popover-title">帮助</h3>
-<div class="popover-content">
-将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该组件的样式。如果你需要了解更多内容，请访问
-<a target="_blank" href="http://www.runoob.com/bootstrap/bootstrap-glyphicons.html">工具组件.</a>
-</div>
-</div>
-</div>
+Components
 </li>
 <li class="boxes" id="elmComponents">
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-尺寸
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-group-lg">大</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-group-md">中</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-group-sm">小</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-group-xs">微型</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="btn-group-vertical">竖向</a>
-</span>
-<div class="preview">按钮组</div>
+
+<div class="preview">BTN-Group</div>
 <div class="view">
 <div class="btn-group">
 <button class="btn btn-default" type="button">
@@ -809,18 +430,16 @@ Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferm
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="dropup">朝向</a>
-</span>
-<div class="preview">下拉菜单</div>
+
+<div class="preview">Select</div>
 <div class="view">
 <div class="btn-group">
 <button class="btn btn-default" contenteditable="true">Action</button>
@@ -829,74 +448,58 @@ Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferm
 </button>
 <ul class="dropdown-menu" contenteditable="true">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">操作</a>
+<a href="javascript:;">高校</a>
 </li>
 <li class="disabled">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">另一操作</a>
+<a href="javascript:;">华农</a>
 </li>
 <li class="divider"></li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">其它</a>
+<a href="javascript:;">华工</a>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="nav-tabs">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="nav-pills">线框</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="nav-stacked">切换格式</a>
-</span>
-<div class="preview">导航</div>
+
+<div class="preview">Navi</div>
 <div class="view">
 <ul class="nav nav-tabs" contenteditable="true">
 <li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">首页</a>
+<a href="javascript:;">首页</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">简介</a>
+<a href="javascript:;">简介</a>
 </li>
 <li class="disabled">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">信息</a>
+<a href="javascript:;">信息</a>
 </li>
 <li class="dropdown pull-right">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" data-toggle="dropdown" class="dropdown-toggle">
+<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">
 下拉 <b class="caret"></b>
 </a>
 <ul class="dropdown-menu">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">操作</a>
+<a href="javascript:;">操作</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">设置栏目</a>
+<a href="javascript:;">设置栏目</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">更多设置</a>
+<a href="javascript:;">更多设置</a>
 </li>
 <li class="divider"></li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">分割线</a>
+<a href="javascript:;">分割线</a>
 </li>
 </ul>
 </li>
@@ -904,290 +507,180 @@ Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferm
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">路径导航</div>
+<div class="preview">Crumb</div>
 <div class="view">
 <ul class="breadcrumb">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" contenteditable="true">Home</a>
+<a href="javascript:;" contenteditable="true">主页</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" contenteditable="true">Library</a>
+<a href="javascript:;" contenteditable="true">NIKE</a>
 </li>
-<li class="active" contenteditable="true">Data</li>
+<li class="active" contenteditable="true">衣服</li>
 </ul>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-尺寸
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="pagination-lg">大</a>
-</li>
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">众</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="pagination-sm">小</a>
-</li>
-</ul>
-</span>
-</span>
-<div class="preview">分页</div>
+
+<div class="preview">Page</div>
 <div class="view">
 <ul class="pagination" contenteditable="true">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Prev</a>
+<a href="javascript:;">头</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">1</a>
+<a href="javascript:;">1</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">2</a>
+<a href="javascript:;">2</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">3</a>
+<a href="javascript:;">3</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">4</a>
+<a href="javascript:;">4</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">5</a>
+<a href="javascript:;">5</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Next</a>
+<a href="javascript:;">尾</a>
 </li>
 </ul>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="label-default">Default</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="label-primary">Primary</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="label-success">Success</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="label-info">Info</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="label-warning">Warning</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="label-danger">Danger</a>
-</li>
-</ul>
-</span>
-</span>
-<div class="preview">标签</div>
+
+<div class="preview">Tab</div>
 <div class="view">
-<span class="label label-default" contenteditable="true">标签</span>
+<span class="label  " contenteditable="true">标签</span>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration"></span>
-<div class="preview">徽章</div>
+
+<div class="preview">Icon</div>
 <div class="view">
 <ul class="nav nav-pills" contenteditable="true">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">
-<span class="badge pull-right">42</span>
-Home
+<li >
+<a href="javascript:;">
+<span class="badge pull-right">3</span>
+消息
 </a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">
-<span class="badge pull-right">16</span>
-More
+<a href="javascript:;">
+<span class="badge pull-right">2</span>
+客服
 </a>
 </li>
 </ul>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="well">Well</a>
-</span>
-<div class="preview">巨幕</div>
+
+<div class="preview">Div</div>
 <div class="view">
 <div class="jumbotron" contenteditable="true">
-<h1>Hello, world!</h1>
+<h1>Make.js</h1>
 <p>
-This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+一个神奇的系统工具
 </p>
 <p>
-<a class="btn btn-primary btn-large" href="http://www.runoob.com/try/bootstrap/layoutit/#">Learn more</a>
+<a class="btn btn-success btn-large" href="javascript:;">下载</a>
 </p>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">页头</div>
+<div class="preview">Header</div>
 <div class="view">
 <div class="page-header">
 <h1 contenteditable="true">
-Example page header
-<small>Subtext for header</small>
+Make.js
+<small>一个神奇的工具</small>
 </h1>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">文本</div>
+<div class="preview">Text</div>
 <div class="view">
-<h2 contenteditable="true">Heading</h2>
+<h2 contenteditable="true">Make</h2>
 <p contenteditable="true">
-Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+详情介绍
 </p>
 <p>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#" contenteditable="true">View details »</a>
+<a class="btn btn-more" href="javascript:;" contenteditable="true">查看更多</a>
 </p>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">缩略图</div>
-<div class="view">
-<div class="row">
-<div class="col-md-4">
-<div class="thumbnail">
-<img alt="300x200" src="./default4.jpg">
-<div class="caption" contenteditable="true">
-<h3>Thumbnail label</h3>
-<p>
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-</p>
-<p>
-<a class="btn btn-primary" href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-</p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<img alt="300x200" src="./default5.jpg">
-<div class="caption" contenteditable="true">
-<h3>Thumbnail label</h3>
-<p>
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-</p>
-<p>
-<a class="btn btn-primary" href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-</p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<img alt="300x200" src="./default6.jpg">
-<div class="caption" contenteditable="true">
-<h3>Thumbnail label</h3>
-<p>
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-</p>
-<p>
-<a class="btn btn-primary" href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="progress-striped">条纹</a>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="active">动画</a>
-</span>
-<div class="preview">进度条</div>
+
+<div class="preview">Process bar</div>
 <div class="view">
 <div class="progress">
 <div class="progress-bar progress-success" style="width: 60%;"></div>
@@ -1195,112 +688,46 @@ Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non m
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="well">嵌入</a>
-</span>
-<div class="preview">媒体</div>
+
+<div class="preview">Channel</div>
 <div class="view">
 <div class="media">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="pull-left">
+<a href="javascript:;" class="pull-left">
 <img src="./default7.jpg" class="media-object"></a>
 <div class="media-body" contenteditable="true">
-<h4 class="media-heading">Nested media heading</h4>
-Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-<div class="media">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="pull-left">
-<img src="./default8.jpg" class="media-object"></a>
-<div class="media-body" contenteditable="true">
-<h4 class="media-heading">Nested media heading</h4>
-Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-</div>
-</div>
+<h4 class="media-heading">三生三世，十里紫荆花</h4>
+一年一度的紫荆花文化节，即将到来
 </div>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration"></span>
-<div class="preview">列表组</div>
-<div class="view">
-<div class="list-group" contenteditable="true">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="list-group-item active">Home</a>
-<div class="list-group-item">List header</div>
-<div class="list-group-item">
-<h4 class="list-group-item-heading">List group item heading</h4>
-<p class="list-group-item-text">...</p>
-</div>
-<div class="list-group-item">
-<span class="badge">14</span>
-Help
-</div>
-<a class="list-group-item active">
-<span class="badge">14</span>
-Help
-</a>
-</div>
-</div>
-</div>
-<div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="panel-default">Default</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="panel-primary">Primary</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="panel-success">Success</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="panel-info">Info</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="panel-warning">Warning</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="panel-danger">Danger</a>
-</li>
-</ul>
-</span>
-</span>
-<div class="preview">面板</div>
+
+
+<div class="preview">Panel</div>
 <div class="view">
 <div class="panel panel-default">
 <div class="panel-heading">
-<h3 class="panel-title" contenteditable="true">Panel title</h3>
+<h3 class="panel-title" contenteditable="true">华农</h3>
 </div>
-<div class="panel-body" contenteditable="true">Panel content</div>
-<div class="panel-footer" contenteditable="true">Panel footer</div>
+<div class="panel-body" contenteditable="true">华工</div>
+<div class="panel-footer" contenteditable="true">广工</div>
 </div>
 </div>
 </div>
@@ -1310,42 +737,31 @@ Help
 <li class="nav-header">
 <i class="glyphicon glyphicon-plus"></i>
 JavaScript
-<div class="pull-right popover-info">
-<i class="glyphicon glyphicon-question-sign "></i>
-<div class="popover fade right">
-<div class="arrow"></div>
-<h3 class="popover-title">帮助</h3>
-<div class="popover-content">
-将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该javascript组件的样式。如果你需要了解更多内容，请访问
-<a target="_blank" href="http://www.runoob.com/bootstrap/bootstrap-plugins-overview.html">JavaScript</a>
-</div>
-</div>
-</div>
 </li>
 <li class="boxes mute" id="elmJS">
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">遮罩窗体</div>
+<div class="preview">Dialog</div>
 <div class="view">
-<a id="myModalLink" href="http://www.runoob.com/try/bootstrap/layoutit/#myModalContainer" role="button" class="btn" data-toggle="modal">触发遮罩窗体</a>
+<a id="myModalLink" href="javascript:;myModalContainer" role="button" class="btn btnOK" data-toggle="modal">显示</a>
 <div class="modal fade" id="myModalContainer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h4 class="modal-title" id="myModalLabel" contenteditable="true">标题</h4>
+<h4 class="modal-title" id="myModalLabel" contenteditable="true">说明</h4>
 </div>
-<div class="modal-body" contenteditable="true">内容...</div>
+<div class="modal-body" contenteditable="true">请说点什么</div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal" contenteditable="true">关闭</button>
-<button type="button" class="btn btn-primary" contenteditable="true">保存</button>
+<button type="button" class="btn btn-default btnOK" contenteditable="true">确定</button>
 </div>
 </div>
 </div>
@@ -1353,38 +769,16 @@ JavaScript
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-位置
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-static-top">头部</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-fixed-top">固定在头部</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-fixed-bottom">固定在底部</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-inverse">反转</a>
-</span>
-<div class="preview">导航栏</div>
+
+<div class="preview">Nav</div>
 <div class="view">
 <nav class="navbar navbar-default" role="navigation">
 <div class="navbar-header">
@@ -1394,37 +788,26 @@ JavaScript
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a class="navbar-brand" href="http://www.runoob.com/try/bootstrap/layoutit/#">Brand</a>
+<a class="navbar-brand" href="javascript:;">Make.js</a>
 </div>
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <ul class="nav navbar-nav">
 <li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
+<a href="javascript:;">技术栈</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
+<a href="javascript:;">参考</a>
 </li>
 <li class="dropdown">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="dropdown-toggle" data-toggle="dropdown">
-Dropdown <b class="caret"></b>
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+支持 <b class="caret"></b>
 </a>
 <ul class="dropdown-menu">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
+<a href="javascript:;">mock</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Another action</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Something else here</a>
-</li>
-<li class="divider"></li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Separated link</a>
-</li>
-<li class="divider"></li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">One more separated link</a>
+<a href="javascript:;">tecent</a>
 </li>
 </ul>
 </li>
@@ -1432,30 +815,23 @@ Dropdown <b class="caret"></b>
 <form class="navbar-form navbar-left" role="search">
 <div class="form-group">
 <input type="text" class="form-control" placeholder="Search"></div>
-<button type="submit" class="btn btn-default">Submit</button>
+<button type="submit" class="btn btn-default">百度一下</button>
 </form>
 <ul class="nav navbar-nav navbar-right">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
+<a href="javascript:;">我的中心</a>
 </li>
 <li class="dropdown">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="dropdown-toggle" data-toggle="dropdown">
-Dropdown
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+客服中心
 <b class="caret"></b>
 </a>
 <ul class="dropdown-menu">
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
+<a href="javascript:;">联系客服</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Another action</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Something else here</a>
-</li>
-<li class="divider"></li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Separated link</a>
+<a href="javascript:;">电话</a>
 </li>
 </ul>
 </li>
@@ -1465,120 +841,99 @@ Dropdown
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration"></span>
-<div class="preview">选项卡</div>
+
+<div class="preview">Tab-card</div>
 <div class="view">
 <div class="tabbable" id="myTabs">
 <ul class="nav nav-tabs">
 <li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#tab1" data-toggle="tab" contenteditable="true">Section 1</a>
+<a href="javascript:;" data-toggle="tab" contenteditable="true">主页</a>
 </li>
 <li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#tab2" data-toggle="tab" contenteditable="true">Section 2</a>
+<a href="javascript:;" data-toggle="tab" contenteditable="true">复页</a>
 </li>
 </ul>
 <div class="tab-content">
 <div class="tab-pane active" id="tab1">
-<p contenteditable="true">I'm in Section 1.</p>
+<p contenteditable="true">华农</p>
 </div>
 <div class="tab-pane" id="tab2">
-<p contenteditable="true">Howdy, I'm in Section 2.</p>
+<p contenteditable="true">华工</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-样式
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="alert-success">Success</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="alert-info">Info</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="alert-warning">Warning</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="alert-danger">Danger</a>
-</li>
-</ul>
-</span>
-</span>
-<div class="preview">提示框</div>
+
+<div class="preview">Tiptool</div>
 <div class="view">
 <div class="alert alert-success alert-dismissable" contenteditable="true">
 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 <h4>注意!</h4>
 <strong>Warning!</strong>
-Best check yo self, you're not looking too good.
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="alert-link">alert link</a>
+上传失败
+<a href="javascript:;" class="alert-link">为什么</a>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">手风琴切换</div>
+<div class="preview">Slide</div>
 <div class="view">
 <div class="panel-group" id="myAccordion">
 <div class="panel panel-default">
 <div class="panel-heading">
-<a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="http://www.runoob.com/try/bootstrap/layoutit/#collapseOne" contenteditable="true">Collapsible Group Item #1</a>
+<a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="javascript:;collapseOne" contenteditable="true">图书馆守则</a>
 </div>
 <div id="collapseOne" class="panel-collapse collapse in">
-<div class="panel-body" contenteditable="true">Anim pariatur cliche...</div>
+<div class="panel-body" contenteditable="true">请保持安静</div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
-<a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="http://www.runoob.com/try/bootstrap/layoutit/#collapseTwo" contenteditable="true">Collapsible Group Item #2</a>
+<a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="javascript:;collapseTwo" contenteditable="true">图书馆开放时间</a>
 </div>
 <div id="collapseTwo" class="panel-collapse collapse">
-<div class="panel-body" contenteditable="true">Anim pariatur cliche...</div>
+<div class="panel-body" contenteditable="true">9-10</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="box box-element ui-draggable">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
+<a href="javascript:;" class="remove label  ">
+  
+ D
 </a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
+<span class="drag label  ">
+ 
+M
 </span>
-<div class="preview">幻灯片</div>
+<div class="preview">Ppt</div>
 <div class="view">
 <div class="carousel slide" id="myCarousel">
 <ol class="carousel-indicators">
@@ -1590,35 +945,35 @@ Best check yo self, you're not looking too good.
 <div class="item active">
 <img alt="" src="./default.jpg">
 <div class="carousel-caption">
-<h4>First Thumbnail label</h4>
+<h4>华南农业大学</h4>
 <p>
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+欢迎同学校友！
 </p>
 </div>
 </div>
 <div class="item">
 <img alt="" src="./default1.jpg">
 <div class="carousel-caption">
-<h4>Second Thumbnail label</h4>
+<h4>精准热水中心</h4>
 <p>
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+又精又准
 </p>
 </div>
 </div>
 <div class="item">
 <img alt="" src="default2.jpg">
 <div class="carousel-caption">
-<h4>Third Thumbnail label</h4>
+<h4>校巴服务中心</h4>
 <p>
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+每15min一班
 </p>
 </div>
 </div>
 </div>
-<a class="left carousel-control" href="http://www.runoob.com/try/bootstrap/layoutit/#myCarousel" data-slide="prev">
+<a class="left carousel-control" href="javascript:;myCarousel" data-slide="prev">
 <span class="glyphicon glyphicon-chevron-left"></span>
 </a>
-<a class="right carousel-control" href="http://www.runoob.com/try/bootstrap/layoutit/#myCarousel" data-slide="next">
+<a class="right carousel-control" href="javascript:;myCarousel" data-slide="next">
 <span class="glyphicon glyphicon-chevron-right"></span>
 </a>
 </div>
@@ -1629,362 +984,11 @@ Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non m
 </div>
 </div>
 <div class="demo ui-sortable" style="min-height: 582px;">
-<div class="lyrow">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<div class="preview">9 3</div>
-<div class="view">
-<div class="row clearfix">
-<div class="col-md-12 column ui-sortable">
-<div class="box box-element">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<span class="configuration">
-<span class="btn-group btn-group-xs">
-<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="http://www.runoob.com/try/bootstrap/layoutit/#">
-位置
-<span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="">默认</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-static-top">头部</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-fixed-top">固定在头部</a>
-</li>
-<li class="">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-fixed-bottom">固定在底部</a>
-</li>
-</ul>
-</span>
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="navbar-inverse">反转</a>
-</span>
-<div class="preview">导航栏</div>
-<div class="view">
-<nav class="navbar navbar-default" role="navigation">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="http://www.runoob.com/try/bootstrap/layoutit/#">Brand</a>
-</div>
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<ul class="nav navbar-nav">
-<li class="active">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
-</li>
-<li class="dropdown">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="dropdown-toggle" data-toggle="dropdown">
-Dropdown
-<b class="caret"></b>
-</a>
-<ul class="dropdown-menu">
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Another action</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Something else here</a>
-</li>
-<li class="divider"></li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Separated link</a>
-</li>
-<li class="divider"></li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">One more separated link</a>
-</li>
-</ul>
-</li>
-</ul>
-<form class="navbar-form navbar-left" role="search">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Search"></div>
-<button type="submit" class="btn btn-default">Submit</button>
-</form>
-<ul class="nav navbar-nav navbar-right">
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
-</li>
-<li class="dropdown">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="dropdown-toggle" data-toggle="dropdown">
-Dropdown
-<b class="caret"></b>
-</a>
-<ul class="dropdown-menu">
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Another action</a>
-</li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Something else here</a>
-</li>
-<li class="divider"></li>
-<li>
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#">Separated link</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-</div>
-</div>
-<div class="box box-element">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<span class="configuration">
-<a class="btn btn-xs btn-default" href="http://www.runoob.com/try/bootstrap/layoutit/#" rel="well">嵌入</a>
-</span>
-<div class="preview">Jumbotron</div>
-<div class="view">
-<div class="jumbotron" contenteditable="true">
-<h1>Hello, world!</h1>
-<p>
-This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-</p>
-<p>
-<a class="btn btn-primary btn-large" href="http://www.runoob.com/try/bootstrap/layoutit/#">Learn more</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="lyrow" style="display: block;">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<div class="preview">4 4 4</div>
-<div class="view">
-<div class="row clearfix">
-<div class="col-md-4 column ui-sortable" style="">
-<div class="box box-element">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<div class="preview">Text</div>
-<div class="view">
-<h2 contenteditable="true">Heading</h2>
-<p contenteditable="true">
-Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-</p>
-<p>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#" contenteditable="true">View details »</a>
-</p>
-</div>
-</div>
-</div>
-<div class="col-md-4 column ui-sortable" style="">
-<div class="box box-element">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-删除
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<div class="preview">Text</div>
-<div class="view">
-<h2 contenteditable="true">Heading</h2>
-<p contenteditable="true">
-Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-</p>
-<p>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#" contenteditable="true">View details »</a>
-</p>
-</div>
-</div>
-</div>
-<div class="col-md-4 column ui-sortable" style="">
-<div class="box box-element">
-<a href="http://www.runoob.com/try/bootstrap/layoutit/#close" class="remove label label-danger">
-<i class="glyphicon glyphicon-remove"></i>
-拖动
-</a>
-<span class="drag label label-default">
-<i class="glyphicon glyphicon-move"></i>
-拖动
-</span>
-<div class="preview">Text</div>
-<div class="view">
-<h2 contenteditable="true">Heading</h2>
-<p contenteditable="true">
-Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-</p>
-<p>
-<a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#" contenteditable="true">View details »</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <div id="download-layout"><div class="container">
 	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="http://www.runoob.com/try/bootstrap/layoutit/#">Brand</a>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
-						</li>
-						<li>
-							 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Another action</a>
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Separated link</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">One more separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control">
-						</div> <button type="submit" class="btn btn-default">Submit</button>
-					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="http://www.runoob.com/try/bootstrap/layoutit/#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Action</a>
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Another action</a>
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									 <a href="http://www.runoob.com/try/bootstrap/layoutit/#">Separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<div class="jumbotron">
-				<h1>
-					Hello, world!
-				</h1>
-				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					 <a class="btn btn-primary btn-large" href="http://www.runoob.com/try/bootstrap/layoutit/#">Learn more</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row clearfix">
-		<div class="col-md-4 column">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				 <a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4 column">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				 <a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4 column">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				 <a class="btn" href="http://www.runoob.com/try/bootstrap/layoutit/#">View details »</a>
-			</p>
-		</div>
-	</div>
+		
+			
 </div></div>
 </div>
 <script type="text/javascript">
@@ -2081,9 +1085,6 @@ Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu
 </div>
 <div class="modal-body">
 <div id="download-logged" class="">
-<div class="alert alert-info">已在下面生成干净的HTML, 可以复制粘贴代码到你的body内<br>
-请使用bootstrap3.0.1,可在这里下载 <a target="_blank" href="http://www.bootcdn.cn/bootstrap/">http://www.bootcdn.cn/bootstrap</a>
-</div>
 <p>
 <textarea></textarea>
 </p>
@@ -2143,7 +1144,7 @@ Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu
 <div class="modal-body">
 <div id="download-logged" class="">
 <div class="alert alert-info">
-<a href="http://www.runoob.com/">菜鸟教程</a>
+<a href="">make.js</a>
 </div>
 </div>
 </div>
